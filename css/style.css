@@ -217,3 +217,219 @@ address {
   border: none;
   border-top: 0.1rem solid var(--color-gray);
 }
+
+/* ЛР3: блочная модель, отступы, позиционирование */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 32rem;
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Обертка */
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+}
+
+h2 {
+  margin-bottom: 4rem;
+}
+
+ul {
+  margin: 0;
+  padding-left: 2rem;
+}
+
+main section {
+  padding: 6rem 0;
+}
+
+/* Шапка */
+.header {
+  padding: 1.5rem 0;
+}
+
+.header img {
+  max-width: 12rem;
+}
+
+.header nav {
+  margin: 1rem 0;
+}
+
+.header__phone {
+  margin-right: 2rem;
+}
+
+/* Кнопки */
+.button {
+  display: inline-block;
+  min-width: 18rem;
+  padding: 1.2rem 2.4rem;
+}
+
+/* Главный экран */
+main .hero {
+  min-height: 50rem;
+  padding: 12rem 0;
+}
+
+.hero p {
+  margin-bottom: 4rem;
+}
+
+/* Карточки */
+.card {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto 3rem;
+  padding: 3rem;
+  overflow: hidden;
+}
+
+.card ul {
+  margin-bottom: 2rem;
+}
+
+.card .button {
+  margin-left: 2rem;
+}
+
+/* Спецпредложения: текст поверх картинки */
+.offer {
+  min-height: 30rem;
+  padding: 0;
+  color: var(--color-white);
+  background-color: var(--color-dark-light);
+}
+
+.offer img {
+  width: 100%;
+}
+
+.offer h3,
+.offer p,
+.offer a {
+  z-index: 1;
+  margin: 0;
+  padding: 0 3rem;
+}
+
+.offer h3 {
+  position: absolute;
+  bottom: 9rem;
+  left: 0;
+}
+
+.offer p {
+  position: absolute;
+  bottom: 5rem;
+  left: 0;
+}
+
+.offer a {
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  color: var(--color-white);
+}
+
+/* Тест */
+.quiz p {
+  max-width: 60rem;
+  margin: 0 auto 3rem;
+}
+
+/* Команда */
+.team li {
+  margin-bottom: 2rem;
+}
+
+/* Сертификат */
+figure {
+  position: relative;
+  max-width: 60rem;
+  margin: 0 auto 3rem;
+}
+
+figcaption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  padding: 1.5rem 2rem;
+  color: var(--color-white);
+  background-color: var(--color-dark-light);
+}
+
+/* Вопросы */
+details {
+  padding: 2rem 0;
+}
+
+details p {
+  margin: 1.5rem 0 0;
+}
+
+form {
+  max-width: 60rem;
+  margin-top: 3rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 2rem;
+  padding: 1.2rem 1.6rem;
+}
+
+address ul {
+  margin-bottom: 2rem;
+}
+
+/* Подвал */
+.footer {
+  padding: 4rem 0 2rem;
+}
+
+.footer img {
+  max-width: 12rem;
+  margin: 0 auto 2rem;
+}
+
+.footer hr {
+  margin: 2rem 0;
+}
+
+.footer p {
+  margin: 0;
+}
