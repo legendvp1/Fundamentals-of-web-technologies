@@ -5,11 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Экскурсии на квадроциклах в Геленджике — CFMOTO Experience Kuban">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>CFMOTO Experience Kuban — экскурсии на квадроциклах в Геленджике</title>
 </head>
 
 <body>
-  <header>
+  <header class="header">
     <a href="#">
       <img src="images/logo.png" alt="Логотип CFMOTO Experience">
     </a>
@@ -24,15 +26,15 @@
       </ul>
     </nav>
 
-    <a href="tel:+79283332645">+7 928 333 26 45</a>
-    <button type="button">Перезвоните мне</button>
+    <a class="header__phone" href="tel:+79283332645">+7 928 333 26 45</a>
+    <button class="button" type="button">Перезвоните мне</button>
   </header>
 
   <main>
-    <section>
+    <section class="hero">
       <h1>Экскурсии на квадроциклах в Геленджике</h1>
       <p>приезжайте за новыми ощущениями и эмоциями!</p>
-      <a href="#routes">Подобрать маршрут</a>
+      <a class="button" href="#routes">Подобрать маршрут</a>
     </section>
 
     <section>
@@ -60,9 +62,9 @@
     <section id="routes">
       <h2>Наши маршруты</h2>
 
-      <article id="gallery">
+      <article class="card" id="gallery">
         <h3>Базовый</h3>
-        <p>от 4000 ₽</p>
+        <p class="card__price">от 4000 ₽</p>
         <ul>
           <li>Время в пути: 1,5 - 2 часа</li>
           <li>Расстояние: 20 - 25 км</li>
@@ -72,7 +74,7 @@
         <p>Смотровая - Родник - Камень Джигита - Адербиевка - Гора Нексис - Грозовые Ворота - Шашлыки -
           Цыгельский водопад (чаша любви) - Форсаж</p>
         <a href="#">Подробнее</a>
-        <button type="button">Забронировать</button>
+        <button class="button" type="button">Забронировать</button>
         <ul>
           <li><img src="images/basic-1.jpg" alt="Маршрут «Базовый», фото 1"></li>
           <li><img src="images/basic-2.jpg" alt="Маршрут «Базовый», фото 2"></li>
@@ -80,9 +82,9 @@
         </ul>
       </article>
 
-      <article>
+      <article class="card">
         <h3>Расширенный</h3>
-        <p>от 16000 ₽</p>
+        <p class="card__price">от 16000 ₽</p>
         <ul>
           <li>Время в пути: 6 - 8 часов</li>
           <li>Расстояние: 60 - 70 км</li>
@@ -92,7 +94,7 @@
         <p>Смотровая - Родник - Камень Джигита - Адербиевка - Гора Нексис - Грозовые Ворота - Шашлыки -
           Цыгельский водопад (чаша любви) - Форсаж</p>
         <a href="#">Подробнее</a>
-        <button type="button">Забронировать</button>
+        <button class="button" type="button">Забронировать</button>
         <ul>
           <li><img src="images/extended-1.jpg" alt="Маршрут «Расширенный», фото 1"></li>
           <li><img src="images/extended-2.jpg" alt="Маршрут «Расширенный», фото 2"></li>
@@ -100,9 +102,9 @@
         </ul>
       </article>
 
-      <article>
+      <article class="card">
         <h3>Experience</h3>
-        <p>от 7000 ₽</p>
+        <p class="card__price">от 7000 ₽</p>
         <ul>
           <li>Время в пути: 4 часа</li>
           <li>Расстояние: 40 - 50 км</li>
@@ -111,7 +113,7 @@
         <h4>Маршрут</h4>
         <p>Форсаж - Голубая бухта – Заброшенная Тур База – Сухогруз Рио – Форсаж</p>
         <a href="#">Подробнее</a>
-        <button type="button">Забронировать</button>
+        <button class="button" type="button">Забронировать</button>
         <ul>
           <li><img src="images/experience-1.jpg" alt="Маршрут «Experience», фото 1"></li>
           <li><img src="images/experience-2.jpg" alt="Маршрут «Experience», фото 2"></li>
@@ -120,10 +122,10 @@
       </article>
     </section>
 
-    <section>
+    <section class="quiz">
       <h2>Затрудняетесь выбрать маршрут?</h2>
       <p>Пройдите тест и мы поможем вам подобрать оптимальную под вас экскурсию</p>
-      <button type="button">Начать тест</button>
+      <button class="button" type="button">Начать тест</button>
     </section>
 
     <section>
@@ -167,12 +169,12 @@
 
     <section id="offers">
       <h2>Спецпредложения</h2>
-      <article>
+      <article class="card">
         <img src="images/offer-1.jpg" alt="Празднование дня рождения">
         <h3>Скидка 10% на День Рождение</h3>
         <p>в честь Дня Рождения - дарим имениннику скидку 10%</p>
       </article>
-      <article>
+      <article class="card">
         <img src="images/offer-2.jpg" alt="Загородный клуб «Ягода Малина»">
         <h3>Скидка 10%</h3>
         <p>клиентам Ex-Kuban на услуги Загородного клуба Ягода Малина</p>
@@ -192,7 +194,7 @@
       <p>Хотите удивить своих близких оригинальным подарком? Подарочный сертификат на экскурсию на квадроциклах
         станет не просто интересным подарком, но и реальной возможностью приблизить Ваших друзей и близких
         к новому увлечению.</p>
-      <button type="button">Подберем сертификат для вас</button>
+      <button class="button" type="button">Подберем сертификат для вас</button>
     </section>
 
     <section id="faq">
@@ -222,7 +224,7 @@
       <form action="#" method="post">
         <label for="question">Ваш вопрос</label>
         <input type="text" id="question" name="question" placeholder="Ваш вопрос">
-        <button type="submit">Задать вопрос</button>
+        <button class="button" type="submit">Задать вопрос</button>
       </form>
     </section>
 
@@ -245,7 +247,7 @@
     </section>
   </main>
 
-  <footer>
+  <footer class="footer">
     <img src="images/logo.png" alt="Логотип CFMOTO Experience">
     <nav>
       <ul>
