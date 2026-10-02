@@ -1,0 +1,219 @@
+/* Шрифты (скачаны через Google Fonts Helper) */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/montserrat-v31-cyrillic_latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/montserrat-v31-cyrillic_latin-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/montserrat-v31-cyrillic_latin-600.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/montserrat-v31-cyrillic_latin-700.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("../fonts/montserrat-v31-cyrillic_latin-800.woff2") format("woff2");
+}
+
+/* Переменные */
+:root {
+  --color-dark: #000000;
+  --color-dark-light: #202020;
+  --color-white: #ffffff;
+  --color-gray: #9a9a9a;
+  --color-light: #f0f0f0;
+  --color-accent: #00848f;
+  --color-accent-hover: #006a73;
+  --color-border: #e0e0e0;
+
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--color-dark);
+  background-color: var(--color-white);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 4.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 3.6rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 2.2rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* Шапка */
+.header {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+
+.header nav a {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--color-white);
+}
+
+.header nav a:hover {
+  color: var(--color-accent);
+}
+
+.header__phone {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+/* Кнопки */
+.button {
+  font-family: inherit;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-white);
+  text-align: center;
+  background-color: var(--color-accent);
+  border: 0.2rem solid var(--color-accent);
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: var(--color-white);
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+}
+
+/* Главный экран */
+.hero {
+  color: var(--color-white);
+  text-align: center;
+  background-color: var(--color-dark-light);
+}
+
+.hero p {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+/* Карточки маршрутов и спецпредложений */
+.card {
+  background-color: var(--color-light);
+  border: 0.1rem solid var(--color-border);
+  border-radius: 2rem;
+}
+
+.card__price {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--color-accent);
+}
+
+/* Блок с тестом */
+.quiz {
+  color: var(--color-white);
+  text-align: center;
+  background-color: var(--color-accent);
+}
+
+.quiz .button {
+  color: var(--color-accent);
+  background-color: var(--color-white);
+  border-color: var(--color-white);
+}
+
+/* Вопросы */
+summary {
+  font-size: 1.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+details {
+  border-bottom: 0.1rem solid var(--color-border);
+}
+
+input {
+  font-family: inherit;
+  font-size: 1.6rem;
+  border: 0.1rem solid var(--color-border);
+  border-radius: 1rem;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Подвал */
+.footer {
+  font-size: 1.4rem;
+  color: var(--color-gray);
+  text-align: center;
+  background-color: var(--color-dark);
+}
+
+.footer a {
+  color: var(--color-white);
+}
+
+.footer hr {
+  border: none;
+  border-top: 0.1rem solid var(--color-gray);
+}
