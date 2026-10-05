@@ -34,6 +34,10 @@
         </a>
         <button class="button button--light" type="button">Перезвоните мне</button>
       </div>
+
+      <button class="header__burger" type="button" aria-label="Открыть меню">
+        <img src="images/menu.svg" width="20" height="20" alt="">
+      </button>
     </div>
   </header>
 
@@ -99,9 +103,9 @@
             </div>
           </div>
           <ul class="route__gallery">
-            <li><img src="images/basic-1.jpg" width="1200" height="800" alt="Маршрут «Базовый», фото 1"></li>
-            <li><img src="images/basic-2.jpg" width="1200" height="800" alt="Маршрут «Базовый», фото 2"></li>
-            <li><img src="images/basic-3.jpg" width="1200" height="800" alt="Маршрут «Базовый», фото 3"></li>
+            <li><img src="images/basic-1.jpg" srcset="images/basic-1-small.jpg 400w, images/basic-1.jpg 1200w" sizes="(min-width: 1200px) 360px, 190px" width="1200" height="800" alt="Маршрут «Базовый», фото 1"></li>
+            <li><img src="images/basic-2.jpg" srcset="images/basic-2-small.jpg 400w, images/basic-2.jpg 1200w" sizes="(min-width: 1200px) 360px, 190px" width="1200" height="800" alt="Маршрут «Базовый», фото 2"></li>
+            <li><img src="images/basic-3.jpg" srcset="images/basic-3-small.jpg 400w, images/basic-3.jpg 1200w" sizes="(min-width: 1200px) 360px, 190px" width="1200" height="800" alt="Маршрут «Базовый», фото 3"></li>
           </ul>
         </article>
 
@@ -123,9 +127,9 @@
             </div>
           </div>
           <ul class="route__gallery">
-            <li><img src="images/extended-1.jpg" width="1200" height="800" alt="Маршрут «Расширенный», фото 1"></li>
-            <li><img src="images/extended-2.jpg" width="600" height="600" alt="Маршрут «Расширенный», фото 2"></li>
-            <li><img src="images/extended-3.jpg" width="1200" height="800" alt="Маршрут «Расширенный», фото 3"></li>
+            <li><img src="images/extended-1.jpg" srcset="images/extended-1-small.jpg 400w, images/extended-1.jpg 1200w" sizes="(min-width: 1200px) 360px, 190px" width="1200" height="800" alt="Маршрут «Расширенный», фото 1"></li>
+            <li><img src="images/extended-2.jpg" srcset="images/extended-2-small.jpg 400w, images/extended-2.jpg 600w" sizes="(min-width: 1200px) 360px, 190px" width="600" height="600" alt="Маршрут «Расширенный», фото 2"></li>
+            <li><img src="images/extended-3.jpg" srcset="images/extended-3-small.jpg 400w, images/extended-3.jpg 1200w" sizes="(min-width: 1200px) 360px, 190px" width="1200" height="800" alt="Маршрут «Расширенный», фото 3"></li>
           </ul>
         </article>
 
@@ -146,9 +150,9 @@
             </div>
           </div>
           <ul class="route__gallery">
-            <li><img src="images/experience-1.jpg" width="541" height="530" alt="Маршрут «Experience», фото 1"></li>
-            <li><img src="images/experience-2.jpg" width="1200" height="675" alt="Маршрут «Experience», фото 2"></li>
-            <li><img src="images/experience-3.jpg" width="1200" height="800" alt="Маршрут «Experience», фото 3"></li>
+            <li><img src="images/experience-1.jpg" srcset="images/experience-1-small.jpg 400w, images/experience-1.jpg 541w" sizes="(min-width: 1200px) 360px, 190px" width="541" height="530" alt="Маршрут «Experience», фото 1"></li>
+            <li><img src="images/experience-2.jpg" srcset="images/experience-2-small.jpg 400w, images/experience-2.jpg 1200w" sizes="(min-width: 1200px) 360px, 190px" width="1200" height="675" alt="Маршрут «Experience», фото 2"></li>
+            <li><img src="images/experience-3.jpg" srcset="images/experience-3-small.jpg 400w, images/experience-3.jpg 1200w" sizes="(min-width: 1200px) 360px, 190px" width="1200" height="800" alt="Маршрут «Experience», фото 3"></li>
           </ul>
         </article>
       </div>
@@ -162,27 +166,49 @@
       </div>
     </section>
 
+    <section class="photos">
+      <div class="container">
+        <h2>Фото</h2>
+        <ul class="photos__list">
+          <li><img src="images/gallery-1.jpg" width="800" height="533" alt="Квадроциклы на лесной дороге"></li>
+          <li><img src="images/gallery-2.jpg" width="533" height="800" alt="Экскурсия на квадроцикле"></li>
+          <li><img src="images/gallery-3.jpg" width="800" height="533" alt="Группа на маршруте"></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="video">
+      <div class="container">
+        <h2 class="sr-only">Видео</h2>
+        <a class="video__link" href="#">
+          <img src="images/video.jpg" width="800" height="533" alt="">
+          <span class="video__title">Название видео</span>
+          <img class="video__play" src="images/play.svg" width="66" height="66" alt="Смотреть видео">
+        </a>
+      </div>
+    </section>
+
     <section class="team">
       <div class="container">
         <h2>Наша команда</h2>
         <ul class="team__list">
           <li class="team__item">
-            <img src="images/team-1.jpg" width="630" height="945" alt="Юлиана">
+            <img src="images/team-1.jpg" srcset="images/team-1-small.jpg 400w, images/team-1.jpg 630w" sizes="(min-width: 1200px) 303px, 50vw" width="630" height="945" alt="Юлиана">
             <h3>Юлиана</h3>
             <p>руководитель</p>
           </li>
           <li class="team__item">
-            <img src="images/team-2.jpg" width="946" height="627" alt="Максим">
+            <img src="images/team-2.jpg" srcset="images/team-2-small.jpg 400w, images/team-2.jpg 946w" sizes="(min-width: 1200px) 303px, 50vw" width="946" height="627" alt="Максим">
             <h3>Максим</h3>
             <p>старший инструктор</p>
           </li>
           <li class="team__item">
-            <img src="images/team-3.jpg" width="797" height="946" alt="Кристина">
+            <img src="images/team-3.jpg" srcset="images/team-3-small.jpg 400w, images/team-3.jpg 797w" sizes="(min-width: 1200px) 303px, 50vw" width="797" height="946" alt="Кристина">
             <h3>Кристина</h3>
             <p>администратор</p>
           </li>
           <li class="team__item">
-            <img src="images/team-4.jpg" width="946" height="631" alt="Юрий">
+            <img src="images/team-4.jpg" srcset="images/team-4-small.jpg 400w, images/team-4.jpg 946w" sizes="(min-width: 1200px) 303px, 50vw" width="946" height="631" alt="Юрий">
             <h3>Юрий</h3>
             <p>старший механик</p>
           </li>
@@ -289,6 +315,46 @@
             </form>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="services">
+      <div class="container">
+        <h2>Дополнительные услуги</h2>
+        <ul class="services__list">
+          <li class="services__item">
+            <img src="images/service-1.jpg" width="600" height="400" alt="">
+            <h3>Эвакуация, ремонт квадроциклов</h3>
+          </li>
+          <li class="services__item">
+            <img src="images/service-2.jpg" width="506" height="684" alt="">
+            <h3>Фото, видеосъемка</h3>
+          </li>
+          <li class="services__item">
+            <img src="images/service-3.jpg" width="600" height="400" alt="">
+            <h3>Транспортировка техники</h3>
+          </li>
+          <li class="services__item">
+            <img src="images/service-4.jpg" width="600" height="400" alt="">
+            <h3>Заправка, чекап, мойка</h3>
+          </li>
+          <li class="services__item">
+            <img src="images/service-5.jpg" width="600" height="400" alt="">
+            <h3>Корпоративы, тимбилдинги</h3>
+          </li>
+          <li class="services__item">
+            <img src="images/service-6.jpg" width="600" height="400" alt="">
+            <h3>Выездной кейтеринг</h3>
+          </li>
+          <li class="services__item">
+            <img src="images/service-7.jpg" width="547" height="684" alt="">
+            <h3>Индивидуальные маршруты</h3>
+          </li>
+          <li class="services__item">
+            <img src="images/service-8.jpg" width="600" height="450" alt="">
+            <h3>Услуги гида</h3>
+          </li>
+        </ul>
       </div>
     </section>
 

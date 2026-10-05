@@ -64,13 +64,14 @@ html {
   box-sizing: inherit;
 }
 
+/* Общие стили (мобильная версия) */
 body {
   min-width: 32rem;
   margin: 0;
   font-family: "Montserrat", Arial, sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.4;
   color: var(--color-dark);
   background-color: var(--color-white);
 }
@@ -99,13 +100,14 @@ p {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   overflow-wrap: break-word;
 }
 
 h2 {
-  margin-bottom: 5rem;
-  font-size: 3.6rem;
+  margin-bottom: 2.4rem;
+  font-size: 2.4rem;
   font-weight: 700;
   line-height: 1.3;
   text-align: center;
@@ -134,7 +136,7 @@ ul {
 .container {
   max-width: 144rem;
   margin: 0 auto;
-  padding: 0 7rem;
+  padding: 0 1rem;
 }
 
 /* Кнопки */
@@ -143,13 +145,14 @@ ul {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
-  min-width: 17.5rem;
-  min-height: 4.5rem;
-  padding: 1rem 2.5rem;
+  min-width: 16.4rem;
+  min-height: 4.1rem;
+  padding: 1rem 2rem;
   font-family: inherit;
   font-size: 1.4rem;
   font-weight: 600;
   color: var(--color-white);
+  text-align: center;
   background-color: var(--color-accent);
   border: 0.15rem solid var(--color-accent);
   border-radius: 0.9rem;
@@ -176,15 +179,14 @@ ul {
 }
 
 .button--arrow {
-  min-height: 5.5rem;
-  padding: 1.2rem 1.2rem 1.2rem 2.3rem;
-  font-size: 1.6rem;
+  min-height: 4.5rem;
+  padding: 1rem 1.2rem 1rem 1.6rem;
 }
 
 .button--arrow img {
-  width: 3.1rem;
-  height: 3.1rem;
-  padding: 0.75rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: 0.6rem;
   background-color: var(--color-white);
   border-radius: 50%;
 }
@@ -196,23 +198,33 @@ ul {
   right: 0;
   left: 0;
   z-index: 10;
-  padding-top: 1.2rem;
+  padding-top: 0.9rem;
 }
 
 .header__inner {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
   gap: 2rem;
+  padding: 0 2rem;
 }
 
 .header__logo img {
-  width: 11.1rem;
+  width: 5rem;
 }
 
-.header__nav {
-  margin: 2.7rem auto 0;
+/* В мобильной версии меню и телефона нет, вместо них кнопка-бургер */
+.header__nav,
+.header__contacts {
+  display: none;
+}
+
+.header__burger {
+  margin-top: 1.2rem;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
 }
 
 .nav__list {
@@ -221,42 +233,15 @@ ul {
   gap: 1rem 4.5rem;
 }
 
-.header .nav__list a {
-  font-size: 1.4rem;
-  font-weight: 500;
-  color: var(--color-white);
-}
-
-.header .nav__list a:hover {
-  color: var(--color-accent);
-}
-
-.header__contacts {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 1.1rem;
-  margin-top: 2.4rem;
-}
-
-.header__phone {
-  display: flex;
-  align-items: center;
-  gap: 1.3rem;
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--color-white);
-}
-
 /* Первый экран */
 .hero {
   display: flex;
   align-items: center;
-  min-height: 91.8rem;
-  padding: 18rem 0 10rem;
+  min-height: 64rem;
+  padding: 10rem 0 5rem;
   color: var(--color-white);
   background-color: var(--color-dark);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/hero.jpg");
+  background-image: linear-gradient(rgba(18, 18, 20, 0.6), rgba(18, 18, 20, 0.6)), url("../images/hero-mobile.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -264,133 +249,127 @@ ul {
 
 .hero .container {
   width: 100%;
+  padding: 0 3.3rem;
 }
 
 .hero__title {
   max-width: 64rem;
-  margin-bottom: 3.7rem;
-  font-size: 7rem;
-  font-weight: 800;
-  line-height: 1.25;
+  margin-bottom: 1.6rem;
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 1.24;
 }
 
 .hero__text {
-  max-width: 64rem;
-  margin-bottom: 8rem;
-  font-size: 2.4rem;
+  max-width: 23rem;
+  margin-bottom: 4rem;
+  font-size: 1.6rem;
   font-weight: 500;
+  line-height: 1.3;
 }
 
 /* Преимущества */
 .advantages {
-  padding: 4.7rem 0;
+  padding: 3rem 0;
 }
 
 .advantages__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 3rem;
+  gap: 1rem 2rem;
 }
 
 .advantages__item {
-  flex: 1 1 0;
+  flex: 1 1 14rem;
   font-size: 1.4rem;
   font-weight: 500;
 }
 
 .advantages__item img {
-  width: 6rem;
-  height: 4.5rem;
-  margin-bottom: 2rem;
+  width: 5.2rem;
+  height: 3.9rem;
+  margin-bottom: 1.4rem;
   object-fit: contain;
   object-position: left;
 }
 
 .advantages__item h3 {
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
   font-weight: 600;
-}
-
-.advantages__item p {
-  margin-bottom: 0;
 }
 
 /* Маршруты */
 .routes {
-  padding: 5.7rem 0 8rem;
+  padding: 3.5rem 0 5rem;
   background-color: var(--color-light);
   background-image: url("../images/bg-lines.png");
-  background-position: center 14.6rem;
-  background-size: 100% auto;
+  background-position: center 10rem;
+  background-size: 200% auto;
   background-repeat: repeat-y;
 }
 
 .route {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 3rem;
-  margin-bottom: 14rem;
+  flex-direction: column;
+  gap: 4rem;
+  margin-bottom: 6.8rem;
 }
 
 .route:last-child {
   margin-bottom: 0;
 }
 
-.route:nth-of-type(2) {
-  flex-direction: row-reverse;
-}
-
 .route__text {
   position: relative;
-  flex: 0 1 52.4rem;
-  margin-left: 11rem;
   font-size: 1.4rem;
   line-height: 1.6;
 }
 
 .route__title {
-  margin-bottom: 0.9rem;
-  font-size: 3.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 0.6rem;
+  font-size: 2.4rem;
   font-weight: 600;
   line-height: 1.1;
   text-transform: uppercase;
 }
 
-.route__title::before {
+/* В мобильной версии линия справа от названия */
+.route__title::after {
   content: "";
-  position: absolute;
-  top: 2rem;
-  left: -11rem;
-  width: 8.1rem;
-  border-top: 0.4rem solid var(--color-accent);
+  flex: 0 1 8.1rem;
+  border-top: 0.3rem solid var(--color-accent);
 }
 
 .route__price {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin-bottom: 3.2rem;
-  font-size: 2.4rem;
+  gap: 0.8rem;
+  margin-bottom: 1.7rem;
+  font-size: 1.8rem;
   font-weight: 700;
+}
+
+.route__price img {
+  width: 1rem;
 }
 
 .route__info {
   display: flex;
   flex-direction: column;
-  gap: 0.9rem;
-  margin-bottom: 2.7rem;
-  font-size: 1.6rem;
+  gap: 0.7rem;
+  margin-bottom: 1.4rem;
   font-weight: 300;
 }
 
 .route__info li {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .route__info img {
@@ -401,50 +380,59 @@ ul {
 .route__subtitle {
   display: flex;
   align-items: center;
-  gap: 1.6rem;
-  margin-bottom: 1.3rem;
-  font-size: 1.8rem;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
   font-weight: 600;
   text-transform: lowercase;
 }
 
+.route__subtitle img {
+  width: 2.2rem;
+}
+
 .route__buttons {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-top: 3.5rem;
+  gap: 1.2rem;
+  margin-top: 2.5rem;
 }
 
-.route__gallery {
-  display: flex;
-  align-items: center;
-  gap: 2.3rem;
-  flex: 0 1 63rem;
-}
-
-.route__gallery li {
-  flex: 0 1 25rem;
+.route__buttons .button {
+  flex: 1 1 0;
   min-width: 0;
 }
 
+/* Фото маршрута в мобильной версии листаются по горизонтали */
+.route__gallery {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.route__gallery li {
+  flex: 0 0 13rem;
+}
+
 .route__gallery li:first-child {
-  flex: 0 1 35.9rem;
+  flex-basis: 18.7rem;
 }
 
 .route__gallery img {
   width: 100%;
-  height: 30rem;
+  height: 15.6rem;
   border-radius: 0.9rem;
   object-fit: cover;
 }
 
 .route__gallery li:first-child img {
-  height: 35.9rem;
+  height: 18.7rem;
 }
 
 /* Тест */
 .quiz {
-  padding: 8.1rem 0 9.4rem;
+  padding: 4.5rem 0 5rem;
   color: var(--color-white);
   text-align: center;
   background-color: var(--color-dark);
@@ -456,26 +444,99 @@ ul {
 
 .quiz p {
   max-width: 75.2rem;
-  margin: 0 auto 4.4rem;
+  margin: 0 auto 3.5rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+/* Фото (есть только в мобильной версии) */
+.photos {
+  padding: 3rem 0;
+}
+
+.photos__list {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+
+.photos__list li {
+  flex: 0 0 19.2rem;
+}
+
+.photos__list li:nth-child(2) {
+  flex-basis: 24.3rem;
+}
+
+.photos__list img {
+  width: 100%;
+  height: 19.2rem;
+  border-radius: 0.9rem;
+  object-fit: cover;
+}
+
+.photos__list li:nth-child(2) img {
+  height: 24.4rem;
+}
+
+/* Видео (есть только в мобильной версии) */
+.video {
+  padding: 4.8rem 0;
+  background-color: var(--color-dark);
+  background-image: linear-gradient(rgba(18, 18, 20, 0.75), rgba(18, 18, 20, 0.75)), url("../images/video-bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.video__link {
+  position: relative;
+  display: block;
+  max-width: 34rem;
+  margin: 0 auto;
+  overflow: hidden;
+  color: var(--color-white);
+  border: 0.3rem solid var(--color-white);
+  border-radius: 2.2rem;
+}
+
+.video__link > img:first-child {
+  width: 100%;
+  height: 34rem;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+
+.video__title {
+  position: absolute;
+  top: 6.6rem;
+  left: 3.4rem;
   font-size: 1.8rem;
   font-weight: 500;
 }
 
+.video__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6.6rem;
+  transform: translate(-50%, -50%);
+}
+
 /* Команда */
 .team {
-  padding: 13rem 0 10rem;
+  padding: 3rem 0;
 }
 
 .team__list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 2.9rem;
+  gap: 1.6rem 2rem;
 }
 
 .team__item {
-  flex: 0 1 30.3rem;
-  min-height: 40.3rem;
+  flex: 1 1 14rem;
   overflow: hidden;
   background-color: var(--color-light);
   border-radius: 0.9rem;
@@ -483,33 +544,32 @@ ul {
 
 .team__item img {
   width: 100%;
-  height: 31.5rem;
-  margin-bottom: 1.2rem;
+  height: 17.9rem;
   object-fit: cover;
   object-position: top;
 }
 
 .team__item h3,
 .team__item p {
-  margin: 0 2.6rem;
+  margin: 0 1.3rem;
 }
 
 .team__item h3 {
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   font-weight: 700;
   line-height: 1.3;
   color: var(--color-accent);
 }
 
 .team__item p {
-  padding-bottom: 2rem;
-  font-size: 1.8rem;
+  padding-bottom: 1rem;
+  font-size: 1.4rem;
   line-height: 1.3;
 }
 
 /* Условия */
 .conditions {
-  padding: 5rem 0 8rem;
+  padding: 3.4rem 0 4.2rem;
   background-color: var(--color-light);
   background-image: url("../images/bg-traced.png");
   background-position: center;
@@ -518,22 +578,23 @@ ul {
 
 .conditions h2 {
   max-width: 50rem;
-  margin: 0 auto 4.3rem;
+  margin: 0 auto 1.7rem;
 }
 
 .conditions__list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 3rem;
+  flex-direction: column;
+  gap: 0.7rem;
 }
 
 .conditions__list li {
   display: flex;
-  gap: 1.8rem;
-  flex: 1 1 35rem;
-  min-height: 11.2rem;
-  padding: 0.9rem 2.7rem 0.9rem 0.5rem;
+  gap: 1rem;
+  flex: 1 1 auto;
+  min-height: 9.1rem;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
   font-size: 1.4rem;
+  line-height: 1.5;
   background-color: var(--color-white);
   border-radius: 0.9rem;
 }
@@ -541,70 +602,71 @@ ul {
 .conditions__list li::before {
   content: "";
   flex-shrink: 0;
-  width: 4.2rem;
-  height: 4.2rem;
+  width: 2.7rem;
+  height: 2.7rem;
   background-color: var(--color-accent);
   background-image: url("../images/check.svg");
   background-position: center;
-  background-size: 3rem;
+  background-size: 1.9rem;
   background-repeat: no-repeat;
   border-radius: 50%;
 }
 
 /* Спецпредложения */
 .offers {
-  padding: 16rem 0 10rem;
+  padding: 2.5rem 0 4rem;
 }
 
 .offers h2 {
-  margin-bottom: 4.5rem;
+  margin-bottom: 2.7rem;
   color: var(--color-gray-dark);
 }
 
 .offers__list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2.8rem;
+  flex-direction: column;
+  gap: 1.4rem;
 }
 
 .offer {
   display: flex;
-  flex-wrap: wrap;
-  gap: 3rem;
-  flex: 0 1 63.6rem;
-  min-height: 31.1rem;
+  flex-direction: column;
+  min-height: 34.4rem;
   overflow: hidden;
   background-color: var(--color-light);
   border-radius: 0.9rem;
 }
 
 .offer img {
-  flex: 0 0 30.3rem;
-  width: 30.3rem;
+  width: 100%;
+  height: 18.5rem;
   border-radius: 0.9rem;
   object-fit: cover;
 }
 
 .offer__text {
-  flex: 1 1 20rem;
-  padding: 2.6rem 2rem 2.6rem 0;
-  font-size: 1.8rem;
-  line-height: 1.3;
+  padding: 1.4rem 2.1rem 1rem;
+  font-size: 1.6rem;
+  line-height: 1.2;
   color: var(--color-gray-dark);
 }
 
 .offer h3 {
-  margin-bottom: 1.9rem;
+  margin-bottom: 0.8rem;
   font-size: 2.4rem;
   font-weight: 700;
-  line-height: 1.4;
+  line-height: 1.39;
   color: var(--color-accent);
+}
+
+.offer .button {
+  min-width: 14.7rem;
+  min-height: 3.5rem;
 }
 
 /* Сертификат */
 .certificate {
-  padding: 5rem 0 9rem;
+  padding: 3.6rem 0 4.6rem;
   background-color: var(--color-light);
   background-image: url("../images/bg-traced.png");
   background-position: center;
@@ -612,13 +674,14 @@ ul {
 }
 
 .certificate h2 {
-  margin-bottom: 1.3rem;
+  margin-bottom: 1rem;
+  color: #151515;
 }
 
 .certificate__lead {
   max-width: 55.8rem;
-  margin: 0 auto 4.6rem;
-  font-size: 2rem;
+  margin: 0 auto 2.5rem;
+  font-size: 1.6rem;
   font-weight: 500;
   line-height: 1.4;
   color: var(--color-accent);
@@ -627,30 +690,30 @@ ul {
 
 .certificate__inner {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  gap: 4rem;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+/* В мобильной версии карточка сертификата стоит выше текста */
+.certificate__card {
+  order: -1;
 }
 
 .certificate__text {
-  flex: 0 1 52.4rem;
-  font-size: 1.6rem;
-  line-height: 1.8;
+  font-size: 1.4rem;
+  line-height: 1.6;
 }
 
 .certificate__text p {
-  margin-bottom: 3rem;
+  margin-bottom: 1.4rem;
 }
 
 .certificate__card {
   position: relative;
   display: flex;
-  justify-content: flex-end;
-  flex: 0 1 63.6rem;
-  min-height: 31.1rem;
+  min-height: 19rem;
   margin: 0;
-  padding: 3.5rem 6rem 3rem 12.5rem;
+  padding: 1.9rem 2.2rem 2rem;
   color: var(--color-white);
   background-color: var(--color-gray-dark);
   border-radius: 0.9rem;
@@ -658,22 +721,22 @@ ul {
 
 .certificate__card img {
   position: absolute;
-  top: 9.7rem;
-  right: 6.3rem;
-  width: 10.4rem;
+  top: 6.6rem;
+  right: 4.7rem;
+  width: 6rem;
 }
 
 .certificate__card figcaption {
   display: flex;
   flex-direction: column;
   width: 100%;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 
 .certificate__card b {
-  margin-bottom: 5rem;
-  font-size: 4.8rem;
-  font-weight: 800;
+  margin-bottom: 1.2rem;
+  font-size: 3rem;
+  font-weight: 900;
   line-height: 1.3;
   color: var(--color-dark);
   text-align: right;
@@ -681,24 +744,27 @@ ul {
 }
 
 .certificate__card span {
-  max-width: 23rem;
-  margin-bottom: 2.2rem;
-  font-size: 2.4rem;
+  max-width: 18rem;
+  margin-bottom: 0.4rem;
+  font-size: 1.8rem;
   font-weight: 700;
   line-height: 1.24;
 }
 
 /* Вопросы */
 .faq {
-  padding: 20rem 0 8rem;
+  padding: 3.4rem 0 4rem;
+}
+
+.faq h2 {
+  margin-bottom: 1.4rem;
+  font-size: 2rem;
 }
 
 .faq__inner {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 6rem;
+  flex-direction: column;
+  gap: 2.3rem;
   max-width: 107.6rem;
   margin: 0 auto;
 }
@@ -707,11 +773,10 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-  flex: 0 1 53.9rem;
 }
 
 details {
-  padding: 1.6rem 2.5rem;
+  padding: 1.6rem 1.2rem;
   border: 0.05rem solid var(--color-border);
   border-radius: 0.2rem;
 }
@@ -735,23 +800,22 @@ details p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex: 0 1 37.8rem;
   text-align: center;
 }
 
 .faq__ask img {
   width: 9.4rem;
-  margin-bottom: 1.4rem;
+  margin-bottom: 0.6rem;
 }
 
 .faq__ask h3 {
   margin-bottom: 1.4rem;
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 600;
 }
 
 .faq__ask p {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   font-size: 1.4rem;
 }
 
@@ -772,26 +836,53 @@ input {
   border-radius: 0.9rem;
 }
 
+/* Дополнительные услуги (есть только в мобильной версии) */
+.services {
+  padding: 2rem 0 4rem;
+}
+
+.services__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.8rem 2rem;
+}
+
+.services__item {
+  flex: 1 1 14rem;
+  min-height: 22.9rem;
+  overflow: hidden;
+  background-color: var(--color-light);
+  border-radius: 0.9rem;
+}
+
+.services__item img {
+  width: 100%;
+  height: 17.9rem;
+  object-fit: cover;
+}
+
+.services__item h3 {
+  margin: 0.4rem 0.8rem 1rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--color-accent);
+}
+
 /* Контакты */
 .contacts {
-  padding-bottom: 7rem;
+  padding-bottom: 3rem;
 }
 
 .contacts__inner {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 4rem;
-}
-
-.contacts__info {
-  flex: 0 1 60rem;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .contacts h2 {
-  margin-bottom: 6.4rem;
-  padding-top: 1.7rem;
+  margin-bottom: 1.6rem;
+  padding-top: 1rem;
   text-align: left;
   border-top: 0.3rem solid var(--color-accent);
 }
@@ -802,24 +893,23 @@ address {
 
 .contacts__list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 4rem 6rem;
-  margin-bottom: 4rem;
-  font-size: 1.8rem;
+  flex-direction: column;
+  gap: 1.4rem;
+  margin-bottom: 1.6rem;
+  font-size: 1.6rem;
 }
 
 .contacts__list li {
   display: flex;
-  align-items: flex-start;
-  gap: 1.6rem;
-  flex: 1 1 25rem;
+  align-items: center;
+  gap: 1.2rem;
 }
 
 .contacts__list img {
   flex-shrink: 0;
-  width: 4.5rem;
-  height: 4.5rem;
-  padding: 1rem;
+  width: 3.9rem;
+  height: 3.9rem;
+  padding: 0.9rem;
   background-color: var(--color-accent);
   border-radius: 50%;
 }
@@ -829,45 +919,70 @@ address {
 }
 
 .contacts__write {
-  margin-bottom: 1.6rem;
-  font-size: 2.4rem;
+  margin-bottom: 0;
+  font-size: 1.8rem;
   font-weight: 600;
+}
+
+address {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.contacts__list {
+  flex: 1 1 100%;
 }
 
 .contacts__social {
   display: flex;
-  gap: 2rem;
+  gap: 1.2rem;
 }
 
 .contacts__social img {
-  width: 4.1rem;
+  width: 3.3rem;
 }
 
+/* В мобильной версии карта идет сразу после заголовка */
 .contacts__map {
-  flex: 0 1 62rem;
-  width: 70.7rem;
-  height: 48rem;
+  order: -1;
+  width: 100%;
+  height: 21.5rem;
   object-fit: cover;
+}
+
+.contacts__info {
+  display: contents;
+}
+
+.contacts h2 {
+  order: -2;
 }
 
 /* Подвал */
 .footer {
-  padding-bottom: 4rem;
+  padding-bottom: 3rem;
 }
 
 .footer__inner {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
-  gap: 5rem;
-  padding: 0.2rem 0 0.3rem 11rem;
-  border-top: 0.1rem solid var(--color-dark);
-  border-bottom: 0.1rem solid var(--color-dark);
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 1.1rem 0 1.5rem;
+  border-top: 0.05rem solid var(--color-dark);
+  border-bottom: 0.05rem solid var(--color-dark);
 }
 
 .footer__inner img {
-  width: 6.5rem;
+  width: 5.4rem;
+}
+
+.footer .nav__list {
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
 }
 
 .footer .nav__list a {
@@ -878,8 +993,648 @@ address {
 }
 
 .footer__copy {
-  margin: 2rem 0 0;
-  font-size: 1.6rem;
+  margin: 1.1rem 0 0;
+  font-size: 1.4rem;
   color: var(--color-gray);
-  text-align: right;
+}
+
+/* Планшет: от 768px помещаются 2-4 карточки в ряд */
+@media (min-width: 768px) {
+  .container {
+    padding: 0 3rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  .hero__title {
+    font-size: 5rem;
+  }
+
+  .hero__text {
+    max-width: 50rem;
+    font-size: 2rem;
+  }
+
+  .advantages__list,
+  .team__list,
+  .services__list {
+    flex-wrap: nowrap;
+  }
+
+  .services__list {
+    flex-wrap: wrap;
+  }
+
+  .services__item {
+    flex-basis: 20%;
+  }
+
+  .route__gallery {
+    overflow-x: visible;
+  }
+
+  .route__gallery li {
+    flex: 1 1 0;
+  }
+
+  .route__gallery li:first-child {
+    flex: 1.4 1 0;
+  }
+
+  .route__buttons .button {
+    flex: 0 0 17.5rem;
+  }
+
+  .conditions__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .conditions__list li {
+    flex: 1 1 30rem;
+  }
+
+  .offers__list {
+    flex-direction: row;
+  }
+
+  .offer {
+    flex: 1 1 0;
+  }
+
+  .photos__list {
+    justify-content: center;
+    overflow-x: visible;
+  }
+
+  .faq__inner {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .faq__list {
+    flex: 1 1 53.9rem;
+  }
+
+  .faq__ask {
+    flex: 1 1 30rem;
+  }
+
+  .footer .nav__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 1rem 3rem;
+  }
+}
+
+/* Десктоп: от 1200px раскладка как в десктопном макете */
+@media (min-width: 1200px) {
+  body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+
+  h2 {
+    margin-bottom: 5rem;
+    font-size: 3.6rem;
+  }
+
+  .container {
+    padding: 0 7rem;
+  }
+
+  .button {
+    min-width: 17.5rem;
+    min-height: 4.5rem;
+    padding: 1rem 2.5rem;
+  }
+
+  .button--arrow {
+    min-height: 5.5rem;
+    padding: 1.2rem 1.2rem 1.2rem 2.3rem;
+    font-size: 1.6rem;
+  }
+
+  .button--arrow img {
+    width: 3.1rem;
+    height: 3.1rem;
+    padding: 0.75rem;
+  }
+
+  /* Шапка */
+  .header {
+    padding-top: 1.2rem;
+  }
+
+  .header__inner {
+    padding: 0 7rem;
+  }
+
+  .header__logo img {
+    width: 11.1rem;
+  }
+
+  .header__burger {
+    display: none;
+  }
+
+  .header__nav {
+    display: block;
+    margin: 2.7rem auto 0;
+  }
+
+  .header .nav__list a {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--color-white);
+  }
+
+  .header .nav__list a:hover {
+    color: var(--color-accent);
+  }
+
+  .header__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.1rem;
+    margin-top: 2.4rem;
+  }
+
+  .header__phone {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-white);
+  }
+
+  /* Первый экран */
+  .hero {
+    min-height: 91.8rem;
+    padding: 18rem 0 10rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/hero.jpg");
+  }
+
+  .hero .container {
+    padding: 0 7rem;
+  }
+
+  .hero__title {
+    margin-bottom: 3.7rem;
+    font-size: 7rem;
+    font-weight: 800;
+    line-height: 1.25;
+  }
+
+  .hero__text {
+    max-width: 64rem;
+    margin-bottom: 8rem;
+    font-size: 2.4rem;
+  }
+
+  /* Преимущества */
+  .advantages {
+    padding: 4.7rem 0;
+  }
+
+  .advantages__list {
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  .advantages__item {
+    flex: 1 1 0;
+  }
+
+  .advantages__item img {
+    width: 6rem;
+    height: 4.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .advantages__item h3 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+  }
+
+  /* Маршруты */
+  .routes {
+    padding: 5.7rem 0 8rem;
+    background-position: center 14.6rem;
+    background-size: 100% auto;
+  }
+
+  .route {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3rem;
+    margin-bottom: 14rem;
+  }
+
+  .route:nth-of-type(2) {
+    flex-direction: row-reverse;
+  }
+
+  .route__text {
+    flex: 0 1 52.4rem;
+    margin-left: 11rem;
+  }
+
+  .route__title {
+    display: block;
+    margin-bottom: 0.9rem;
+    font-size: 3.6rem;
+  }
+
+  .route__title::after {
+    content: none;
+  }
+
+  .route__title::before {
+    content: "";
+    position: absolute;
+    top: 2rem;
+    left: -11rem;
+    width: 8.1rem;
+    border-top: 0.4rem solid var(--color-accent);
+  }
+
+  .route__price {
+    gap: 1rem;
+    margin-bottom: 3.2rem;
+    font-size: 2.4rem;
+  }
+
+  .route__price img {
+    width: 1.3rem;
+  }
+
+  .route__info {
+    gap: 0.9rem;
+    margin-bottom: 2.7rem;
+    font-size: 1.6rem;
+  }
+
+  .route__info li {
+    gap: 1.5rem;
+  }
+
+  .route__subtitle {
+    gap: 1.6rem;
+    margin-bottom: 1.3rem;
+    font-size: 1.8rem;
+  }
+
+  .route__subtitle img {
+    width: 2.4rem;
+  }
+
+  .route__buttons {
+    gap: 1.5rem;
+    margin-top: 3.5rem;
+  }
+
+  .route__gallery {
+    flex: 0 1 63rem;
+    gap: 2.3rem;
+    padding-bottom: 0;
+  }
+
+  .route__gallery li {
+    flex: 0 1 25rem;
+    min-width: 0;
+  }
+
+  .route__gallery li:first-child {
+    flex: 0 1 35.9rem;
+  }
+
+  .route__gallery img {
+    height: 30rem;
+  }
+
+  .route__gallery li:first-child img {
+    height: 35.9rem;
+  }
+
+  /* Тест */
+  .quiz {
+    padding: 8.1rem 0 9.4rem;
+  }
+
+  .quiz p {
+    margin-bottom: 4.4rem;
+    font-size: 1.8rem;
+  }
+
+  /* В десктопном макете этих блоков нет */
+  .photos,
+  .video,
+  .services {
+    display: none;
+  }
+
+  /* Команда */
+  .team {
+    padding: 13rem 0 10rem;
+  }
+
+  .team__list {
+    justify-content: space-between;
+    gap: 2.9rem;
+  }
+
+  .team__item {
+    flex: 0 1 30.3rem;
+    min-height: 40.3rem;
+  }
+
+  .team__item img {
+    height: 31.5rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .team__item h3,
+  .team__item p {
+    margin: 0 2.6rem;
+  }
+
+  .team__item h3 {
+    font-size: 2.4rem;
+  }
+
+  .team__item p {
+    padding-bottom: 2rem;
+    font-size: 1.8rem;
+  }
+
+  /* Условия */
+  .conditions {
+    padding: 5rem 0 8rem;
+  }
+
+  .conditions h2 {
+    margin-bottom: 4.3rem;
+  }
+
+  .conditions__list {
+    gap: 3rem;
+  }
+
+  .conditions__list li {
+    gap: 1.8rem;
+    flex: 1 1 35rem;
+    min-height: 11.2rem;
+    padding: 0.9rem 2.7rem 0.9rem 0.5rem;
+  }
+
+  .conditions__list li::before {
+    width: 4.2rem;
+    height: 4.2rem;
+    background-size: 3rem;
+  }
+
+  /* Спецпредложения */
+  .offers {
+    padding: 16rem 0 10rem;
+  }
+
+  .offers h2 {
+    margin-bottom: 4.5rem;
+  }
+
+  .offers__list {
+    justify-content: center;
+    gap: 2.8rem;
+  }
+
+  .offer {
+    flex-direction: row;
+    gap: 3rem;
+    flex: 0 1 63.6rem;
+    min-height: 31.1rem;
+  }
+
+  .offer img {
+    flex: 0 0 30.3rem;
+    width: 30.3rem;
+    height: auto;
+  }
+
+  .offer__text {
+    flex: 1 1 20rem;
+    padding: 2.6rem 2rem 2.6rem 0;
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+  .offer h3 {
+    margin-bottom: 1.9rem;
+    line-height: 1.4;
+  }
+
+  .offer .button {
+    min-width: 17.5rem;
+    min-height: 4.5rem;
+  }
+
+  /* Сертификат */
+  .certificate {
+    padding: 5rem 0 9rem;
+  }
+
+  .certificate h2 {
+    margin-bottom: 1.3rem;
+  }
+
+  .certificate__lead {
+    margin-bottom: 4.6rem;
+    font-size: 2rem;
+  }
+
+  .certificate__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .certificate__card {
+    order: 0;
+    justify-content: flex-end;
+    flex: 0 1 63.6rem;
+    min-height: 31.1rem;
+    padding: 3.5rem 6rem 3rem 12.5rem;
+    font-size: 1.6rem;
+  }
+
+  .certificate__text {
+    flex: 0 1 52.4rem;
+    font-size: 1.6rem;
+    line-height: 1.8;
+  }
+
+  .certificate__text p {
+    margin-bottom: 3rem;
+  }
+
+  .certificate__card img {
+    top: 9.7rem;
+    right: 6.3rem;
+    width: 10.4rem;
+  }
+
+  .certificate__card figcaption {
+    font-size: 1.6rem;
+  }
+
+  .certificate__card b {
+    margin-bottom: 5rem;
+    font-size: 4.8rem;
+    font-weight: 800;
+  }
+
+  .certificate__card span {
+    max-width: 23rem;
+    margin-bottom: 2.2rem;
+    font-size: 2.4rem;
+  }
+
+  /* Вопросы */
+  .faq {
+    padding: 20rem 0 8rem;
+  }
+
+  .faq h2 {
+    margin-bottom: 5rem;
+    font-size: 3.6rem;
+  }
+
+  .faq__inner {
+    justify-content: space-between;
+    gap: 6rem;
+  }
+
+  .faq__list {
+    flex: 0 1 53.9rem;
+  }
+
+  details {
+    padding: 1.6rem 2.5rem;
+  }
+
+  .faq__ask {
+    flex: 0 1 37.8rem;
+  }
+
+  .faq__ask img {
+    margin-bottom: 1.4rem;
+  }
+
+  .faq__ask h3 {
+    font-size: 2.4rem;
+  }
+
+  .faq__ask p {
+    margin-bottom: 3rem;
+  }
+
+  /* Контакты */
+  .contacts {
+    padding-bottom: 7rem;
+  }
+
+  .contacts__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem;
+  }
+
+  .contacts__info {
+    display: block;
+    flex: 0 1 60rem;
+  }
+
+  .contacts h2 {
+    margin-bottom: 6.4rem;
+    padding-top: 1.7rem;
+  }
+
+  address {
+    display: block;
+  }
+
+  .contacts__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4rem 6rem;
+    margin-bottom: 4rem;
+    font-size: 1.8rem;
+  }
+
+  .contacts__list li {
+    align-items: flex-start;
+    gap: 1.6rem;
+    flex: 1 1 25rem;
+  }
+
+  .contacts__list img {
+    width: 4.5rem;
+    height: 4.5rem;
+    padding: 1rem;
+  }
+
+  .contacts__write {
+    margin-bottom: 1.6rem;
+    font-size: 2.4rem;
+  }
+
+  .contacts__social {
+    gap: 2rem;
+  }
+
+  .contacts__social img {
+    width: 4.1rem;
+  }
+
+  .contacts__map {
+    order: 0;
+    flex: 0 1 62rem;
+    width: 70.7rem;
+    height: 48rem;
+  }
+
+  /* Подвал */
+  .footer {
+    padding-bottom: 4rem;
+  }
+
+  .footer__inner {
+    align-items: center;
+    gap: 5rem;
+    padding: 0.2rem 0 0.3rem 11rem;
+    border-top-width: 0.1rem;
+    border-bottom-width: 0.1rem;
+  }
+
+  .footer__inner img {
+    width: 6.5rem;
+  }
+
+  .footer .nav__list {
+    gap: 1rem 4.5rem;
+  }
+
+  .footer__copy {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    text-align: right;
+  }
 }
