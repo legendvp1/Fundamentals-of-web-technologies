@@ -5,19 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Экскурсии на квадроциклах в Геленджике — CFMOTO Experience Kuban">
+  <link rel="icon" href="images/logo.png" type="image/png">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <title>CFMOTO Experience Kuban — экскурсии на квадроциклах в Геленджике</title>
 </head>
 
 <body>
+  <a class="skip-link" href="#main">Перейти к основному содержанию</a>
+
   <header class="header" id="top">
     <div class="container header__inner">
       <a class="header__logo" href="#top">
-        <img src="images/logo.png" width="134" height="171" alt="Логотип CFMOTO Experience">
+        <img src="images/logo.png" width="134" height="171" alt="">
+        <span class="sr-only">CFMOTO Experience, на главную</span>
       </a>
 
-      <nav class="header__nav">
+      <nav class="header__nav" id="main-nav" aria-label="Основное меню">
         <ul class="nav__list">
           <li><a href="#routes">Маршруты</a></li>
           <li><a href="#gallery">Галерея</a></li>
@@ -35,13 +39,14 @@
         <button class="button button--light" type="button">Перезвоните мне</button>
       </div>
 
-      <button class="header__burger" type="button" aria-label="Открыть меню">
+      <button class="header__burger" type="button" aria-controls="main-nav" aria-expanded="false">
         <img src="images/menu.svg" width="20" height="20" alt="">
+        <span class="sr-only">Открыть меню</span>
       </button>
     </div>
   </header>
 
-  <main>
+  <main id="main" tabindex="-1">
     <section class="hero">
       <div class="container">
         <h1 class="hero__title">Экскурсии на квадроциклах в Геленджике</h1>
@@ -102,7 +107,7 @@
               <button class="button" type="button">Забронировать</button>
             </div>
           </div>
-          <ul class="route__gallery">
+          <ul class="route__gallery" tabindex="0" aria-label="Фото маршрута «Базовый»">
             <li><img src="images/basic-1.jpg" srcset="images/basic-1-small.jpg 400w, images/basic-1.jpg 1200w" sizes="(min-width: 1200px) 360px, 190px" width="1200" height="800" alt="Маршрут «Базовый», фото 1"></li>
             <li><img src="images/basic-2.jpg" srcset="images/basic-2-small.jpg 400w, images/basic-2.jpg 1200w" sizes="(min-width: 1200px) 360px, 190px" width="1200" height="800" alt="Маршрут «Базовый», фото 2"></li>
             <li><img src="images/basic-3.jpg" srcset="images/basic-3-small.jpg 400w, images/basic-3.jpg 1200w" sizes="(min-width: 1200px) 360px, 190px" width="1200" height="800" alt="Маршрут «Базовый», фото 3"></li>
@@ -126,7 +131,7 @@
               <button class="button" type="button">Забронировать</button>
             </div>
           </div>
-          <ul class="route__gallery">
+          <ul class="route__gallery" tabindex="0" aria-label="Фото маршрута «Расширенный»">
             <li><img src="images/extended-1.jpg" srcset="images/extended-1-small.jpg 400w, images/extended-1.jpg 1200w" sizes="(min-width: 1200px) 360px, 190px" width="1200" height="800" alt="Маршрут «Расширенный», фото 1"></li>
             <li><img src="images/extended-2.jpg" srcset="images/extended-2-small.jpg 400w, images/extended-2.jpg 600w" sizes="(min-width: 1200px) 360px, 190px" width="600" height="600" alt="Маршрут «Расширенный», фото 2"></li>
             <li><img src="images/extended-3.jpg" srcset="images/extended-3-small.jpg 400w, images/extended-3.jpg 1200w" sizes="(min-width: 1200px) 360px, 190px" width="1200" height="800" alt="Маршрут «Расширенный», фото 3"></li>
@@ -149,7 +154,7 @@
               <button class="button" type="button">Забронировать</button>
             </div>
           </div>
-          <ul class="route__gallery">
+          <ul class="route__gallery" tabindex="0" aria-label="Фото маршрута «Experience»">
             <li><img src="images/experience-1.jpg" srcset="images/experience-1-small.jpg 400w, images/experience-1.jpg 541w" sizes="(min-width: 1200px) 360px, 190px" width="541" height="530" alt="Маршрут «Experience», фото 1"></li>
             <li><img src="images/experience-2.jpg" srcset="images/experience-2-small.jpg 400w, images/experience-2.jpg 1200w" sizes="(min-width: 1200px) 360px, 190px" width="1200" height="675" alt="Маршрут «Experience», фото 2"></li>
             <li><img src="images/experience-3.jpg" srcset="images/experience-3-small.jpg 400w, images/experience-3.jpg 1200w" sizes="(min-width: 1200px) 360px, 190px" width="1200" height="800" alt="Маршрут «Experience», фото 3"></li>
@@ -169,7 +174,7 @@
     <section class="photos">
       <div class="container">
         <h2>Фото</h2>
-        <ul class="photos__list">
+        <ul class="photos__list" tabindex="0" aria-label="Фотографии с экскурсий">
           <li><img src="images/gallery-1.jpg" width="800" height="533" alt="Квадроциклы на лесной дороге"></li>
           <li><img src="images/gallery-2.jpg" width="533" height="800" alt="Экскурсия на квадроцикле"></li>
           <li><img src="images/gallery-3.jpg" width="800" height="533" alt="Группа на маршруте"></li>
@@ -183,7 +188,8 @@
         <a class="video__link" href="#">
           <img src="images/video.jpg" width="800" height="533" alt="">
           <span class="video__title">Название видео</span>
-          <img class="video__play" src="images/play.svg" width="66" height="66" alt="Смотреть видео">
+          <img class="video__play" src="images/play.svg" width="66" height="66" alt="">
+          <span class="sr-only">Смотреть видео</span>
         </a>
       </div>
     </section>
@@ -308,11 +314,7 @@
             <h3>Есть вопросы?</h3>
             <p>Не стесняйтесь обращаться к нам, если у вас есть какие-либо вопросы, предложения или идеи для
               сотрудничества</p>
-            <form class="faq__form" action="#" method="post">
-              <label class="sr-only" for="question">Ваш вопрос</label>
-              <input type="text" id="question" name="question" placeholder="Ваш вопрос">
-              <button class="button" type="submit">Задать вопрос</button>
-            </form>
+            <button class="button" type="button">Задать вопрос</button>
           </div>
         </div>
       </div>
@@ -376,12 +378,14 @@
             <ul class="contacts__social">
               <li>
                 <a href="https://wa.me/79284280062">
-                  <img src="images/whatsapp.svg" width="41" height="41" alt="WhatsApp">
+                  <img src="images/whatsapp.svg" width="41" height="41" alt="">
+                  <span class="sr-only">Написать в WhatsApp</span>
                 </a>
               </li>
               <li>
                 <a href="https://instagram.com/">
-                  <img src="images/instagram.svg" width="41" height="41" alt="Instagram">
+                  <img src="images/instagram.svg" width="41" height="41" alt="">
+                  <span class="sr-only">Открыть Instagram</span>
                 </a>
               </li>
             </ul>
@@ -396,8 +400,8 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
-        <img src="images/logo.png" width="134" height="171" alt="Логотип CFMOTO Experience">
-        <nav>
+        <img src="images/logo.png" width="134" height="171" alt="Логотип CFMOTO Experience Kuban">
+        <nav aria-label="Меню в подвале">
           <ul class="nav__list">
             <li><a href="#routes">Маршруты</a></li>
             <li><a href="#gallery">Галерея</a></li>
