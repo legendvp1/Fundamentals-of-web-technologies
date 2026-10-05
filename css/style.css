@@ -43,12 +43,12 @@
 :root {
   --color-dark: #121214;
   --color-gray-dark: #373737;
-  --color-gray: #787878;
+  --color-gray: #6e6e6e;
   --color-border: #848484;
   --color-light: #f4f4f4;
   --color-white: #ffffff;
-  --color-accent: #037e8c;
-  --color-accent-hover: #02646f;
+  --color-accent: #02737f;
+  --color-accent-hover: #025a63;
 
   font-size: 62.5%;
 }
@@ -123,13 +123,53 @@ ul {
   position: absolute;
   width: 1px;
   height: 1px;
-  margin: -1px;
-  border: 0;
   padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
+  margin: -1px;
   overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Ссылка для перехода к контенту, видна только при фокусе с клавиатуры */
+.skip-link {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 100;
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--color-white);
+  background-color: var(--color-dark);
+  border-radius: 0.9rem;
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  color: var(--color-white);
+  transform: translateY(0);
+}
+
+/* Заметный фокус для всех интерактивных элементов */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+ul:focus-visible {
+  outline: 0.3rem solid var(--color-accent);
+  outline-offset: 0.3rem;
+}
+
+.header a:focus-visible,
+.header button:focus-visible,
+.hero a:focus-visible,
+.quiz button:focus-visible,
+.video a:focus-visible {
+  outline-color: var(--color-white);
+}
+
+main:focus {
+  outline: none;
 }
 
 /* Обертка */
@@ -174,8 +214,8 @@ ul {
   min-width: 0;
   min-height: 4rem;
   padding: 1rem 2rem;
-  background-color: rgba(255, 255, 255, 0.4);
-  border-color: transparent;
+  background-color: rgba(18, 18, 20, 0.5);
+  border-color: rgba(255, 255, 255, 0.6);
 }
 
 .button--arrow {
@@ -738,7 +778,7 @@ ul {
   font-size: 3rem;
   font-weight: 900;
   line-height: 1.3;
-  color: var(--color-dark);
+  color: #9a9a9a;
   text-align: right;
   text-transform: uppercase;
 }
@@ -786,9 +826,34 @@ details[open] {
 }
 
 summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
   font-size: 1.6rem;
   font-weight: 600;
+  list-style: none;
   cursor: pointer;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Стрелка справа как в макете */
+summary::after {
+  content: "";
+  flex-shrink: 0;
+  width: 1.8rem;
+  height: 1.8rem;
+  background-image: url("../images/arrow-down.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: rotate(90deg);
+}
+
+details[open] summary::after {
+  transform: rotate(-90deg);
 }
 
 details p {
@@ -817,23 +882,6 @@ details p {
 .faq__ask p {
   margin-bottom: 2rem;
   font-size: 1.4rem;
-}
-
-.faq__form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-  width: 100%;
-}
-
-input {
-  width: 100%;
-  padding: 1.2rem 1.6rem;
-  font-family: inherit;
-  font-size: 1.4rem;
-  border: 0.05rem solid var(--color-border);
-  border-radius: 0.9rem;
 }
 
 /* Дополнительные услуги (есть только в мобильной версии) */
@@ -1177,7 +1225,7 @@ address {
   .hero {
     min-height: 91.8rem;
     padding: 18rem 0 10rem;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/hero.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/hero.jpg");
   }
 
   .hero .container {
