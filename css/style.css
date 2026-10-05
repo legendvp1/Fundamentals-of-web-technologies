@@ -433,3 +433,59 @@ address ul {
 .footer p {
   margin: 0;
 }
+
+/* ЛР4: изображения */
+main .hero {
+  background-color: var(--color-dark-light);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/hero.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header img,
+.footer img {
+  width: 8rem;
+}
+
+section li > img[alt=""] {
+  width: 12rem;
+  margin-bottom: 1.5rem;
+}
+
+.card li img {
+  width: 30rem;
+  height: 20rem;
+  margin-bottom: 1rem;
+  object-fit: cover;
+}
+
+.team img {
+  width: 100%;
+  max-width: 28rem;
+  height: 32rem;
+  margin-bottom: 1.5rem;
+  object-fit: cover;
+  object-position: top;
+}
+
+.offer img {
+  height: 30rem;
+  object-fit: cover;
+}
+
+figure img {
+  width: 100%;
+}
+
+#contacts img {
+  width: 100%;
+  max-width: 60rem;
+  margin-bottom: 3rem;
+}
+
+.offer h3,
+.offer p,
+.offer a {
+  text-shadow: 0 0.1rem 0.4rem var(--color-dark);
+}
